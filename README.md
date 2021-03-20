@@ -84,3 +84,34 @@ spec:
 参考上面yaml示例。
 
 ## 基于Header划分请求
+
+```yaml
+kind: IngressRoute
+metadata:
+  name: ingressroute1
+  namespace: default
+spec:
+  entryPoints:
+    - web
+  routes:
+  - match: Host(`your.example.com`) && Headers(`Version`,`v1`)
+    kind: Rule
+    services:
+    - name: nginx-v1
+      port: 80
+```
+
+## 测试
+
+```shell
+
+$ curl -H "Host: your.example.com" -H "Version: v1" http://<EXTERNAL-IP>
+nginx-v1
+
+$ curl -H "Host: your.example.com" -H "Version: v2" http://<EXTERNAL-IP>
+nginx-v2
+
+$ curl -H "Host: your.example.com" -H "Version: v3" http://<EXTERNAL-IP>
+nginx-v3
+
+```
