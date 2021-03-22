@@ -2,6 +2,12 @@
 
 traefik
 
+## treafik部署
+
+参考文档：https://cloud.tencent.com/document/product/457/32730
+![image](https://user-images.githubusercontent.com/42019725/111931943-4ee33380-8af7-11eb-9ccd-211b44677f9b.png)
+
+
 ## 服务部署
 案例demo中，将部署3个服务（V1/v2/v3）
 
