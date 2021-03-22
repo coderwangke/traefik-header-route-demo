@@ -1,6 +1,9 @@
 # traefik-header-route-demo
 
-traefik
+traefik ingressRoute by Header
+
+![image](https://user-images.githubusercontent.com/42019725/111932300-1e4fc980-8af8-11eb-8665-63ac6eedbd57.png)
+
 
 ## treafik部署
 
